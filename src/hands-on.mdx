@@ -1,5 +1,7 @@
 import { CodeSurfer } from "mdx-deck-code-surfer";
 import dracula from "prism-react-renderer/themes/dracula";
+import { Image,Appear } from "mdx-deck";
+import { FullScreenCode } from "mdx-deck/layouts";
 
 <CodeSurfer
   title="SETUP WEB"
@@ -35,4 +37,42 @@ import dracula from "prism-react-renderer/themes/dracula";
 
 ---
 
-# Obrigado!
+# E no mobile como funciona?
+
+---
+export default FullScreenCode;
+
+<Image size="width: 40%" src={require("file-loader!./images/mobile-platforms.png")} />
+
+---
+
+# Requisitos no mobile 
+
+Geração de Credenciais
+
+<div>
+  <Appear>
+    <p>ANDROID - Gerar um Google Server API Key</p>
+    <p>iOS - Gerar um iOS Push Certificate</p>
+  </Appear>
+</div>
+
+---
+
+<CodeSurfer
+  title="Exemplo no React Native"
+  lang="javascript"
+  showNumbers={true}
+  theme={dracula}
+  code={require("!raw-loader!./code-samples/rn.js")}
+  steps={[
+    { lines: [1], notes: "Bibliotéca Open Source" },
+    { lines: [6, 7, 8, 9, 10, 11, 12, 13, 14], notes: "Autenticação  / Eventos / Token" },
+  ]}
+/>
+
+---
+
+# Então tar
+
+**Obrigado!**
