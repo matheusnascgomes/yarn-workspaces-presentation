@@ -1,0 +1,38 @@
+import { CodeSurfer } from "mdx-deck-code-surfer";
+import dracula from "prism-react-renderer/themes/dracula";
+
+<CodeSurfer
+  title="SETUP WEB"
+  lang="html"
+  showNumbers={true}
+  theme={dracula}
+  code={require("!raw-loader!./code-samples/getting-started.html")}
+  steps={[{ notes: "_" }]}
+/>
+
+---
+
+# REST API 
+**https://onesignal.com/api/v1/notifications**
+
+---
+
+<CodeSurfer
+  title="API"
+  lang="php"
+  showNumbers={true}
+  theme={dracula}
+  code={require("!raw-loader!./code-samples/sending.php")}
+  steps={[
+    { notes: "package.json" },
+    { lines: [3], notes: "Método genêrico para envio" },
+    { lines: [10], notes: "Cria um array de ids (segments) " },
+    { lines: [12, 13,14,15,16,17,18,19,20,21,22], notes: "Campos" },
+    { lines: [27], notes: "A Utilização da API" },
+    { lines: [38], notes: "Execução do CURL" },
+  ]}
+/>
+
+---
+
+# Obrigado!

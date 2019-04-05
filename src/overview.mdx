@@ -2,46 +2,50 @@ import { Appear } from "mdx-deck";
 import { Image } from "mdx-deck";
 import { FullScreenCode } from "mdx-deck/layouts";
 
-# About Yarn
+# O que é o OneSignal?
 
-> Yarn is a package manager for your code. It allows you to use and share code with other developers from around the world. Yarn does this quickly, securely, and reliably so you don’t ever have to worry.
+Serviço de Push Notification para sites e aplicativos móveis. Que oferece suporte a todas as principais plataformas, fornecendo SDKs dedicados para cada plataforma, uma API de servidor RESTful e um painel on-line para os profissionais de marketing projetarem e enviarem notificações por push.
 
 ---
 
-# Multi repos, why?
+# Mas por quê?
 
-<ul>
+>Permitir que os desenvolvedores se concentrem no envolvimento do usuário com a qualidade do produto ao invés de uma implementação complexa
+<!-- 
+  Essa complexidade muitas vezes se dá pelo fato de ser necessário gerenciar
+  o token que é gerado no momento em que o dispositivo se comunica com a API de notifications, 
+  e que ao utilizar um sistema de Notifications,como Firebase, por exemplo, 
+  este token sofre alterações de tempos em tempos, Tornando um pouco complicado 
+  identificar o momento em que seu Backend deve receber um novo token.
+ -->
+
+---
+
+# Requisitos para utilização
+
+<div>
   <Appear>
-    <li>Build only the necessary</li>
-    <li>Clearer subversion history</li>
-    <li>Easier revert 💥</li>
-    <li>1 app > 1 repo</li>
-    <li>1 components ui > 1 repo</li>
-    <li>1 service > 1 repo...</li>
+    <p>Uma conta OneSignal</p>
+    <p>Seu OneSignal App ID, disponível em Keys & IDs</p>
   </Appear>
-</ul>
+</div>
 
 ---
 
-# Monorepos, why?
+# Requisitos no mobile 
 
-<ul>
+Geração de Credenciais
+
+<div>
   <Appear>
-    <li>Sequential builds</li>
-    <li>Dependecies 💥</li>
-    <li>Versioning</li>
-    <li>Shared services/components/functions...</li>
+    <p>ANDROID - Gerar um Google Server API Key</p>
+    <p>iOS - Gerar um iOS Push Certificate</p>
   </Appear>
-</ul>
+</div>
 
----
+<!-- 
+  Para IOS existe uma certa complexidade envolvida, pois é necessário uma Apple Id 
+  inscrita no programa de desenvolvimento da Apple $$$$
 
-export default FullScreenCode;
-
-<Image src={require("file-loader!./images/monorepo-2.png")} />
-
----
-
-export default FullScreenCode;
-
-<Image src={require("file-loader!./images/monorepo-3.png")} />
+  Vale lembrar também que Push Notifications Web no IOS ainda não é permitida
+-->
